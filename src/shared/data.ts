@@ -11,7 +11,11 @@ export const yearData: YearData[] = [
                 name: 'Наука',
                 events: [
                     { year: 2015, title: 'Частное солнечное затмение', description: '13 сентября...' },
-                    { year: 2016, title: 'Телескоп «Хаббл»', description: 'Обнаружил GN-z11' }
+                    { year: 2016, title: 'Телескоп «Хаббл»', description: 'Обнаружил GN-z11' },
+                    { year: 2017, title: 'Телескоп «Хаббл»', description: 'Обнаружил GN-z11' },
+                    { year: 2018, title: 'Телескоп «Хаббл»', description: 'Обнаружил GN-z11' },
+                    { year: 2019, title: 'Телескоп «Хаббл»', description: 'Обнаружил GN-z11' },
+                    { year: 2020, title: 'Телескоп «Хаббл»', description: 'Обнаружил GN-z11' }
                 ]
             },
             {
@@ -24,6 +28,27 @@ export const yearData: YearData[] = [
             },
             {
                 id: 'culture',
+                name: 'Культура',
+                events: [
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
+                ]
+            },
+            {
+                id: 'art',
+                name: 'Культура',
+                events: [
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
+                ]
+            },
+            {
+                id: 'bell',
+                name: 'Культура',
+                events: [
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
+                ]
+            },
+            {
+                id: 'lecture',
                 name: 'Культура',
                 events: [
                     { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }

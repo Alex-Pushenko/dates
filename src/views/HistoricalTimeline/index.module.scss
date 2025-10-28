@@ -1,19 +1,26 @@
 .container {
-  padding: 40px 20px;
+  padding: 0 20px;
+  height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
+  border-right: 1px solid #d0d0d0;
+  border-left: 1px solid #d0d0d0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   color: #3a4b67;
   text-align: left;
   position: relative;
   padding-left: 12px;
+  flex-shrink: 0;
+  margin-left: -20px;
 }
 
 .title::before {
@@ -31,10 +38,11 @@
   position: relative;
   width: 500px;
   height: 500px;
-  margin: 40px auto;
+  margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .rotatingGroup {
@@ -67,7 +75,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
-  z-index: 20;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +135,7 @@
   opacity: 0;
   transform: scale(0.5);
   transition: all 0.3s ease;
+  z-index: 101;
 }
 
 .centerLine {
@@ -162,12 +171,11 @@
   color: #3a4b67;
   white-space: nowrap;
   pointer-events: none;
-  z-index: 25;
-  transform: translate(-40%, -50%);
+  z-index: 102;
+  transform: translate(10%, -50%);
 }
 
 .tooltipNumber {
-
   .activeTooltip & {
     background-color: white;
     color: #4a90e2;
@@ -184,7 +192,7 @@
   position: relative;
   z-index: 5;
   display: flex;
-  gap: 16px;
+  gap: 80px;
   align-items: center;
   justify-content: center;
   pointer-events: none;
@@ -200,7 +208,7 @@
 
 @media (min-width: 768px) {
   .year {
-    font-size: 8rem;
+    font-size: 9.5rem;
   }
 }
 
@@ -215,7 +223,7 @@
 .navigationBlock {
   position: absolute;
   left: 2%;
-  top: 70%;
+  top: 80%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -233,8 +241,8 @@
 
 .counter_buttons{
   display: flex;
-  flexDirection: row;
-  gap: 15px
+  flex-direction: row;
+  gap: 15px;
 }
 
 .arrowBtn {
@@ -254,7 +262,83 @@
 
 .swiperContainer {
   margin-top: 30px;
+  flex-shrink: 0;
+  position: relative;
   padding: 0 20px;
+  cursor: grab;
+}
+
+.swiperWrapper{
+  padding: 0 2.5rem !important;
+  min-width: 390px !important;
+}
+
+.swiperButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.swiper_btn{
+  padding: .2rem;
+  position: absolute;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.btn_prev{
+  left: 1rem;
+  z-index: 2;
+}
+
+.btn_next{
+  right: 1rem;
+  z-index: 2;
+}
+
+.swiper {
+  padding: 0 50px !important;
+}
+
+.customPrev,
+.customNext {
+  width: 30px !important;
+  height: 30px !important;
+  margin-top: -15px !important;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+
+  &::after {
+    font-size: 12px !important;
+    font-weight: bold;
+    color: #3a4b67;
+  }
+
+  &:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+    transform: scale(1.1);
+  }
+
+  background-image: none !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+  cursor: not-allowed;
+
+  &:hover {
+    transform: scale(1) !important;
+    background: white !important;
+    border-color: #dee2e6 !important;
+  }
 }
 
 .eventCard {
@@ -263,6 +347,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 390px;
 }
 
 .eventYear {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperRef, SwiperSlide} from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,6 +16,8 @@ const HistoricalTimeline: React.FC = () => {
     const hoverNumbersRef = useRef<(HTMLSpanElement | null)[]>([]);
     const startYearRef = useRef<HTMLSpanElement>(null);
     const endYearRef = useRef<HTMLSpanElement>(null);
+    const swiperRef = useRef<SwiperRef>(null);
+
 
     const currentYear = yearData[activeYearIndex] || yearData[0];
     const currentTheme = currentYear.themes[activeThemeIndex] || currentYear.themes[0];
@@ -218,30 +220,75 @@ const HistoricalTimeline: React.FC = () => {
                 </div>
             </div>
 
-            <div className={styles.swiperContainer}>
-                <Swiper
-                    modules={[Navigation]}
-                    spaceBetween={20}
-                    slidesPerView={3}
-                    navigation={true}
-                    simulateTouch={true}
-                    breakpoints={{
-                        320: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 }
-                    }}
-                >
-                    {currentTheme.events.map((event, idx) => (
-                        <SwiperSlide key={idx}>
-                            <div className={styles.eventCard}>
-                                <h3 className={styles.eventYear}>{event.year}</h3>
-                                <p className={styles.eventTitle}>{event.title}</p>
-                                <p className={styles.eventDesc}>{event.description}</p>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+            <section className={styles.swiperContainer}>
+                <div className={styles.swiperButtons}>
+                    <button
+                        className={`${styles.swiper_btn} ${styles.btn_prev}`}
+                        onClick={() => {
+                            swiperRef.current?.swiper.slidePrev();
+                        }}
+                    >
+                        <svg width="20" height="20" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 1L1.25537 4.74463L5 8.48926" stroke="#4a90e2"/>
+                        </svg>
+                    </button>
+
+                    <Swiper
+                        ref={swiperRef}
+                        modules={[]}
+                        spaceBetween={20}
+                        slidesPerView={3}
+                        simulateTouch={true}
+                        watchSlidesProgress={false}
+                        breakpoints={{
+                            320: {slidesPerView: 1},
+                            768: {slidesPerView: 2},
+                            1024: {slidesPerView: 3}
+                        }}
+                        onReachBeginning={() => {
+                            const prevBtn = document.querySelector(`${styles.btn_prev}`) as HTMLElement;
+                            if (prevBtn) prevBtn.style.opacity = '0';
+                        }}
+                        onReachEnd={() => {
+                            const nextBtn = document.querySelector(`${styles.btn_next}`) as HTMLElement;
+                            if (nextBtn) nextBtn.style.opacity = '1';
+                        }}
+                        onSlideChange={(swiper: any) => {
+                            const prevBtn = document.querySelector(`${styles.btn_prev}`) as HTMLElement;
+                            const nextBtn = document.querySelector(`${styles.btn_next}`) as HTMLElement;
+
+                            if (prevBtn) {
+                                prevBtn.style.opacity = swiper.isBeginning ? '0' : '1';
+                            }
+                            if (nextBtn) {
+                                nextBtn.style.opacity = swiper.isEnd ? '0' : '1';
+                            }
+                        }}
+                        className={styles.swiperWrapper}
+                    >
+                        {currentTheme.events.map((event, idx) => (
+                            <SwiperSlide key={idx}>
+                                <div className={styles.eventCard}>
+                                    <h3 className={styles.eventYear}>{event.year}</h3>
+                                    <p className={styles.eventTitle}>{event.title}</p>
+                                    <p className={styles.eventDesc}>{event.description}</p>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    <button
+                        className={`${styles.swiper_btn} ${styles.btn_next}`}
+                        onClick={() => {
+                            swiperRef.current?.swiper.slideNext();
+                        }}
+                    >
+                        <svg width="20" height="20" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8L4.74463 4.25537L1 0.510737" stroke="#4a90e2"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
         </div>
     );
 };
