@@ -1,3 +1,9 @@
+Для запуска проекта необзодимо:
+1) Ввести у себя в консоли команду git clone https://github.com/Alex-Pushenko/dates.git
+2) Установить необходимые компоненты с помощью npm i
+3) Для запуска проекта прописать в терминале npm start
+4) Проект откроется в http://localhost:3000
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
