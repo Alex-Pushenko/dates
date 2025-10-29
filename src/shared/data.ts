@@ -23,13 +23,16 @@ export const yearData: YearData[] = [
                 name: 'Технологии',
                 events: [
                     { year: 2017, title: 'Tesla Semi', description: 'Электрический грузовик' },
-                    { year: 2020, title: 'Zoom рост', description: 'Пандемия и видеоконференции' }
+                    { year: 2018, title: 'Tesla Semi', description: 'Электрический грузовик' },
+                    { year: 2019, title: 'Tesla Semi', description: 'Электрический грузовик' },
                 ]
             },
             {
                 id: 'culture',
                 name: 'Культура',
                 events: [
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
                     { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
                 ]
             },
@@ -37,6 +40,8 @@ export const yearData: YearData[] = [
                 id: 'art',
                 name: 'Культура',
                 events: [
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
                     { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
                 ]
             },
@@ -44,13 +49,17 @@ export const yearData: YearData[] = [
                 id: 'bell',
                 name: 'Культура',
                 events: [
-                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
                 ]
             },
             {
                 id: 'lecture',
                 name: 'Культура',
                 events: [
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
                     { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
                 ]
             }
@@ -65,14 +74,18 @@ export const yearData: YearData[] = [
                 id: 'literature',
                 name: 'Литература',
                 events: [
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' }
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
                 ]
             },
             {
                 id: 'politics',
                 name: 'Политика',
                 events: [
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' }
+                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
                 ]
             }
         ]
@@ -86,14 +99,18 @@ export const yearData: YearData[] = [
                 id: 'literature',
                 name: 'Литература',
                 events: [
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' }
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
                 ]
             },
             {
                 id: 'politics',
                 name: 'Политика',
                 events: [
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' }
+                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
                 ]
             }
         ]
