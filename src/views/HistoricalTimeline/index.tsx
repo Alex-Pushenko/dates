@@ -255,10 +255,11 @@ const HistoricalTimeline: React.FC = () => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Исторические даты</h1>
+            <div className={styles.centerLine}></div>
+
 
             {!isMobile && (
                 <div className={styles.circleWrapper}>
-                    <div className={styles.centerLine}></div>
                     <div className={styles.horizontalLine}></div>
                     <div ref={circleRef} className={styles.rotatingGroup}>
                         <div className={styles.circle}></div>
@@ -305,7 +306,8 @@ const HistoricalTimeline: React.FC = () => {
                                 swiperRef.current?.swiper.slidePrev();
                             }}
                         >
-                            <svg width="20" height="20" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 6 9" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 1L1.25537 4.74463L5 8.48926" stroke="#4a90e2"/>
                             </svg>
                         </button>
@@ -315,8 +317,8 @@ const HistoricalTimeline: React.FC = () => {
                         ref={swiperRef}
                         modules={[Navigation]}
                         spaceBetween={isMobile ? 8 : 20}
-                        slidesPerView={1}
-                        loop={isMobile}
+                        slidesPerView={3}
+                        // loop={isMobile}
                         simulateTouch={true}
                         watchSlidesProgress={false}
                         onSlideChange={(swiper: any) => {
@@ -332,7 +334,7 @@ const HistoricalTimeline: React.FC = () => {
                             }
                         }}
                         breakpoints={{
-                            320: {slidesPerView: 1},
+                            320: {slidesPerView: 2},
                             768: {slidesPerView: 2},
                             1024: {slidesPerView: 3}
                         }}
@@ -356,7 +358,8 @@ const HistoricalTimeline: React.FC = () => {
                                 swiperRef.current?.swiper.slideNext();
                             }}
                         >
-                            <svg width="20" height="20" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0 0 6 9" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 8L4.74463 4.25537L1 0.510737" stroke="#4a90e2"/>
                             </svg>
                         </button>
@@ -393,6 +396,8 @@ const HistoricalTimeline: React.FC = () => {
                         activeIndex={activeYearIndex}
                         onYearClick={handleYearClick}
                     />
+
+                    <div></div>
                 </div>
             )}
         </div>

@@ -44,6 +44,7 @@
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  overflow: visible;
 }
 
 .rotatingGroup {
@@ -148,17 +149,31 @@
   background-color: #d0d0d0;
   transform: translateX(-50%);
   z-index: 1;
+  @media (max-width: 767px){
+  display: none;
+}
 }
 
 .horizontalLine {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 50%;
+  left: 50%;
   height: 1px;
-  background-color: #d0d0d0;
-  transform: translateY(-50%);
+  background-color: #ccc;
   z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1200px) {
+  .horizontalLine {
+    width: calc(100% + 700px);
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 748px) {
+  .horizontalLine {
+    width: 100vw;
+  }
 }
 
 .themeTooltip {
@@ -217,7 +232,7 @@
 
 @media (max-width: 767px) {
   .year {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -426,7 +441,6 @@
 
   .swiperContainer {
     flex-grow: 1;
-    margin-top: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -448,7 +462,7 @@
     display: flex;
     align-items: center;
     min-height: 0;
-    max-height: 400px;
+    max-height: 250px;
     height: 100%;
   }
 
@@ -486,8 +500,8 @@
   }
 
   .mobileThemeHeader {
-    text-align: center;
-    margin-bottom: 16px;
+    text-align: left;
+    margin-bottom: 1rem;
     flex-shrink: 0;
 
     .mobileThemeTitle {
@@ -499,20 +513,20 @@
 
     .themeDivider {
       height: 1px;
-      background: linear-gradient(to right, transparent 0%, #d0d0d0 50%, transparent 100%);
+      background: gray;
       margin: 0 auto;
-      width: 80%;
+      width: 100%;
     }
   }
 
   .navigationBlockMobile {
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 50px;
+    justify-content: space-between;
+    gap: 60px;
     padding: 16px 0;
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5rem;
 
     .navLeftSection {
       display: flex;
