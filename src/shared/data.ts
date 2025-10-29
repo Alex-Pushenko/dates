@@ -3,6 +3,58 @@ import { YearData } from './interfaces';
 export const yearData: YearData[] = [
     {
         id: 1,
+        yearStart: 1999,
+        yearEnd: 2004,
+        themes: [
+            {
+                id: 'literature',
+                name: 'Литература',
+                events: [
+                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 2000, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 2001, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                ]
+            },
+            {
+                id: 'politics',
+                name: 'Политика',
+                events: [
+                    { year: 1999, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2001, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2002, title: 'Выборы в США', description: 'Буш vs Гор' },
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        yearStart: 2005,
+        yearEnd: 2009,
+        themes: [
+            {
+                id: 'literature',
+                name: 'Литература',
+                events: [
+                    { year: 2005, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 2006, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 2007, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 2008, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                    { year: 2009, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
+                ]
+            },
+            {
+                id: 'politics',
+                name: 'Политика',
+                events: [
+                    { year: 2005, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2006, title: 'Выборы в США', description: 'Буш vs Гор' },
+                    { year: 2007, title: 'Выборы в США', description: 'Буш vs Гор' },
+                ]
+            }
+        ]
+    },
+    {
+        id: 3,
         yearStart: 2015,
         yearEnd: 2022,
         themes: [
@@ -32,8 +84,8 @@ export const yearData: YearData[] = [
                 name: 'Культура',
                 events: [
                     { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
-                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
-                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
+                    { year: 2020, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2021, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
                 ]
             },
             {
@@ -41,8 +93,8 @@ export const yearData: YearData[] = [
                 name: 'Культура',
                 events: [
                     { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
-                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
-                    { year: 2019, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
+                    { year: 2020, title: 'Джокер', description: 'Фильм получил «Золотого льва»' },
+                    { year: 2021, title: 'Джокер', description: 'Фильм получил «Золотого льва»' }
                 ]
             },
             {
@@ -65,54 +117,5 @@ export const yearData: YearData[] = [
             }
         ]
     },
-    {
-        id: 2,
-        yearStart: 1999,
-        yearEnd: 2004,
-        themes: [
-            {
-                id: 'literature',
-                name: 'Литература',
-                events: [
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
-                ]
-            },
-            {
-                id: 'politics',
-                name: 'Политика',
-                events: [
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
-                ]
-            }
-        ]
-    },
-    {
-        id: 3,
-        yearStart: 2005,
-        yearEnd: 2009,
-        themes: [
-            {
-                id: 'literature',
-                name: 'Литература',
-                events: [
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
-                    { year: 1999, title: 'Премьера балета «Золушка»', description: 'Постановка Ж.-К. Майо' },
-                ]
-            },
-            {
-                id: 'politics',
-                name: 'Политика',
-                events: [
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
-                    { year: 2000, title: 'Выборы в США', description: 'Буш vs Гор' },
-                ]
-            }
-        ]
-    }
+
 ];
